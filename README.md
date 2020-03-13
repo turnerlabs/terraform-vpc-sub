@@ -16,4 +16,4 @@ VPC
 
 Route tables to make all this work
 
-1 EIP for NAT Gateway
+2 EIPs for NAT Gateways
