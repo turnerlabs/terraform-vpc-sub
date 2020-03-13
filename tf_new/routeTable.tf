@@ -16,11 +16,18 @@ resource "aws_route_table_association" "aws_route_table_association_private_2" {
   route_table_id  = aws_route_table.rt_main.id
 }
 
-resource "aws_route" "route_ngw" { 
+resource "aws_route" "route_ngw_1" { 
   route_table_id          = aws_route_table.rt_main.id
   destination_cidr_block  = "0.0.0.0/0"
-  nat_gateway_id          = aws_nat_gateway.natgw.id
+  nat_gateway_id          = aws_nat_gateway.natgw_1.id
 }
+
+resource "aws_route" "route_ngw_2" { 
+  route_table_id          = aws_route_table.rt_main.id
+  destination_cidr_block  = "0.0.0.0/0"
+  nat_gateway_id          = aws_nat_gateway.natgw_2.id
+}
+
 
 # Custom Route Table
 
