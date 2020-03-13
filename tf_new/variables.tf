@@ -3,7 +3,7 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "profile" {
+variable "aws_profile" {
   description = "Profile from credentials"
   default     = "default"
 }

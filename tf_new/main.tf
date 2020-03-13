@@ -5,7 +5,8 @@ terraform {
   backend "s3" {
     bucket = "tf-state" # the terraform state bucket has to be hand entered unfortunately
     key    = "tf_vpc_sub/terraform.tfstate"
-    region = "us-east-1"
+    region = "us-east-1" # hand entered as well
+    profile = "default" # hand entered as well
   }
 }
 
@@ -13,5 +14,5 @@ terraform {
 provider "aws" {
   version = "~> 2.44.0"
   region  = var.region
-  profile = var.profile
+  profile = var.aws_profile
 }

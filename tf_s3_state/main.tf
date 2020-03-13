@@ -5,7 +5,7 @@ terraform {
 provider "aws" {
   version = "~> 2.44.0"
   region  = var.region
-  profile = var.profile
+  profile = var.aws_profile
 }
 # create an s3 bucket
 resource "aws_s3_bucket" "bucket" {
