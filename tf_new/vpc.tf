@@ -7,5 +7,12 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames  = true
   enable_classiclink    = false
 
-  tags = var.tags
+  tags = {
+    Name = var.vpc_name
+    application = var.tags.application
+    customer = var.tags.customer
+    contact-email = var.tags.contact-email
+    environment = var.tags.environment
+    team = var.tags.team
+  }
 }
