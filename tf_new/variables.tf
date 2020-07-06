@@ -13,16 +13,26 @@ variable "tags" {
 }
 
 variable "vpc_name" {
-    description = "the name of the vpc"
+  description = "the name of the vpc"
 }
 
 variable "availability_zone_1" {
-  description = "az 1 of 2 azs"
+  description = "az 1 of 4 azs"
   default     = "us-east-1a"
 }
 
 variable "availability_zone_2" {
-  description = "az 2 of 2 azs"
+  description = "az 2 of 4 azs"
   default     = "us-east-1b"
+}
+
+variable "availability_zone_3" {
+  description = "az 3 of 4 azs"
+  default     = "us-east-1c"
+}
+
+variable "availability_zone_4" {
+  description = "az 4 of 4 azs"
+  default     = "us-east-1d"
 }
 
